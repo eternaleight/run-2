@@ -18,11 +18,12 @@
 api_token = "<your_api_token>"
 zone_id = "<your_zone_id>"
 account_id = "<your_account_id>"
+bucket_name = "terraform-test-bucket"
 
 # Cloud Run
 project_id = "<YOUR_GCP_PROJECT_ID>"
 region = "asia-northeast1"
-service_name = "<YOUR_CLOUD_RUN_SERVICE_NAME>"
+service_name = "terraform-test-cloudrun"
 github_owner = "<YOUR_GITHUB_USERNAME_OR_ORG_NAME>"
 github_repo = "<YOUR_GITHUB_REPO_NAME>"
 

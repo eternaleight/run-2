@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     cloudflare = {
-      source = "cloudflare/cloudflare"
+      source  = "cloudflare/cloudflare"
       version = "~> 4"
     }
   }
@@ -10,6 +10,7 @@ terraform {
 variable "api_token" {}
 variable "zone_id" {}
 variable "account_id" {}
+variable "bucket_name" {}
 
 provider "cloudflare" {
   api_token = var.api_token
@@ -17,5 +18,5 @@ provider "cloudflare" {
 
 resource "cloudflare_r2_bucket" "example" {
   account_id = var.account_id
-  name       = "terraform-test-bucket"
+  name       = var.bucket_name
 }
