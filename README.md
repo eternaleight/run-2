@@ -1,49 +1,47 @@
 # Terraform-Merged-Project (R2, Cloud Run)
 
 
-1. **初期化**:
-最初に、Terraformの初期化を行う必要があります。これにより、必要なプロバイダプラグインがダウンロードされ、Terraformの環境が初期化されます。
+このTerraformプロジェクトは、Google Cloud RunサービスとCloudflare R2バケットのデプロイを自動化します。
 
-```zsh
+## 前提条件
+- Terraformがインストールされている
+- Google Cloud SDKがインストールされている
+- Google Cloud Platformのアカウントがある
+- GitHubのアカウント（リポジトリ）がある
+- Cloudflareのアカウントがある
+
+## セットアップ
+**Terraform変数の設定**: `.terraform.tfvars` ファイルを作成し、必要な変数を設定します。例として、`.terraform_example.tfvars` ファイルを参考にしてください。
+
+```hcl
+# Cloudflare R2
+api_token = "<your_api_token>"
+zone_id = "<your_zone_id>"
+account_id = "<your_account_id>"
+
+# Cloud Run
+project_id = "<YOUR_GCP_PROJECT_ID>"
+region = "asia-northeast1"
+service_name = "<YOUR_CLOUD_RUN_SERVICE_NAME>"
+github_owner = "<YOUR_GITHUB_USERNAME_OR_ORG_NAME>"
+github_repo = "<YOUR_GITHUB_REPO_NAME>"
+
+# BACKEND_ENV 
+env_vars = {
+  BACKEND_ENV_NAME = "<BACKEND_ENV_VALUE>"
+  BACKEND_ENV_NAME2 = "<BACKEND_ENV_VALUE2>"
+}
+```
+
+## 使用方法
+Google Cloud RunサービスとCloudflare R2バケットをデプロイするには、以下のTerraformコマンドを実行します：
+```sh
 terraform init
-```
-
-2. **実行計画の生成**:
-次に、`terraform plan` コマンドを使って実行計画を生成します。このコマンドは、実際に変更を適用する前に、どのような変更が行われるかを示すものです。`-var-file` オプションを使用して `.terraform.tfvars` ファイルを指定します。
-
-```zsh
-terraform plan -var-file=".terraform.tfvars"
-```
-
-3. **変更の適用**:
-`terraform apply` コマンドを使って、実際に変更を適用します。再度、`-var-file` オプションを使用して `.terraform.tfvars` ファイルを指定します。
-
-```zsh
 terraform apply -var-file=".terraform.tfvars"
 ```
 
-このコマンドを実行すると、Terraformは変更を確認するプロンプトを表示します。変更内容を確認し、問題がなければ `yes` を入力して変更を適用します。
-
-これで、Terraformのコードが実行され、インフラストラクチャが作成または更新されます。`.terraform.tfvars` ファイルは、センシティブな情報（APIトークンなど）を提供するために使用されます。
-<br>
-<br>
-
-## Terraformで管理しているリソースを削除するには、`terraform destroy` コマンドを使用します。
-
-
-1. **`terraform destroy`の実行**: 
-    まず、コマンドラインから以下のコマンドを実行してください。
-
-```zsh
+## リソースの削除
+デプロイしたリソースを削除するには、以下のコマンドを実行します：
+```sh
 terraform destroy -var-file=".terraform.tfvars"
 ```
-
-このコマンドは、Terraformが管理しているリソースを削除するための計画を表示します。計画を確認した後、実際にリソースを削除するかどうかを確認されます。
-
-2. **確認**:
-`terraform destroy` コマンドを実行すると、削除されるリソースの一覧が表示され、確認プロンプトが表示されます。この確認プロンプトで `yes` と入力すると、リソースの削除が開始されます。
-
-3. **注意事項**:
-`terraform destroy` はTerraformで管理しているすべてのリソースを削除する強力なコマンドです。このコマンドを実行する前に、削除されるリソースを十分に確認してください。特に、データベースやストレージのようなデータを持つリソースに関しては、データのバックアップを取得しておくことを強くおすすめします。
-
-上記の手順を完了すると、Terraformが管理しているリソースがすべて削除されます。
