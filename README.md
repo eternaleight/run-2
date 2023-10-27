@@ -19,7 +19,7 @@ terraform plan -var-file="secrets.tfvars"
 `terraform apply` コマンドを使って、実際に変更を適用します。再度、`-var-file` オプションを使用して `secrets.tfvars` ファイルを指定します。
 
 ```zsh
-terraform apply -var-file="secrets_example.tfvars" -var-file=".terraform_example.tfvars"
+terraform apply -var-file=".terraform_example.tfvars"
 ```
 
 このコマンドを実行すると、Terraformは変更を確認するプロンプトを表示します。変更内容を確認し、問題がなければ `yes` を入力して変更を適用します。
@@ -35,7 +35,7 @@ terraform apply -var-file="secrets_example.tfvars" -var-file=".terraform_example
     まず、コマンドラインから以下のコマンドを実行してください。
 
 ```zsh
-terraform destroy -var-file="secrets_example.tfvars" -var-file=".terraform_example.tfvars"
+terraform destroy -var-file=".terraform_example.tfvars"
 ```
 
 このコマンドは、Terraformが管理しているリソースを削除するための計画を表示します。計画を確認した後、実際にリソースを削除するかどうかを確認されます。
