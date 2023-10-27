@@ -28,7 +28,7 @@ resource "google_cloud_run_service" "default" {
 
     spec {
       containers {
-        image = "gcr.io/${var.project_id}/${var.service_name}"
+        image = "gcr.io/${var.project_id}/${var.github_repo}"
 
         dynamic "env" {
           for_each = var.env_vars
