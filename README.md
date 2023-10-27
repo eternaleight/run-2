@@ -16,7 +16,7 @@ terraform plan -var-file=".terraform_example.tfvars"
 ```
 
 3. **変更の適用**:
-`terraform apply` コマンドを使って、実際に変更を適用します。再度、`-var-file` オプションを使用して `secrets.tfvars` ファイルを指定します。
+`terraform apply` コマンドを使って、実際に変更を適用します。再度、`-var-file` オプションを使用して `.terraform_example.tfvars` ファイルを指定します。
 
 ```zsh
 terraform apply -var-file=".terraform_example.tfvars"
