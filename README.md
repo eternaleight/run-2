@@ -1,7 +1,7 @@
 # Terraform-Merged-Project (R2, Cloud Run)
 
 
-このTerraformプロジェクトは、Google Cloud RunサービスとCloudflare R2バケットのデプロイを自動化します。
+このTerraformプロジェクトは、Google Cloud Runsサービス（コスト削減設定）とCloudflare R2バケットのデプロイを自動化します。
 
 ## 前提条件
 - Terraformがインストールされている
