@@ -9,10 +9,10 @@ terraform init
 ```
 
 2. **実行計画の生成**:
-次に、`terraform plan` コマンドを使って実行計画を生成します。このコマンドは、実際に変更を適用する前に、どのような変更が行われるかを示すものです。`-var-file` オプションを使用して `secrets.tfvars` ファイルを指定します。
+次に、`terraform plan` コマンドを使って実行計画を生成します。このコマンドは、実際に変更を適用する前に、どのような変更が行われるかを示すものです。`-var-file` オプションを使用して `.terraform_example.tfvars` ファイルを指定します。
 
 ```zsh
-terraform plan -var-file="secrets.tfvars"
+terraform plan -var-file=".terraform_example.tfvars"
 ```
 
 3. **変更の適用**:
@@ -24,7 +24,7 @@ terraform apply -var-file=".terraform_example.tfvars"
 
 このコマンドを実行すると、Terraformは変更を確認するプロンプトを表示します。変更内容を確認し、問題がなければ `yes` を入力して変更を適用します。
 
-これで、`cloudflare.tf` に記述されたTerraformのコードが実行され、インフラストラクチャが作成または更新されます。`secrets.tfvars` ファイルは、センシティブな情報（APIトークンなど）を提供するために使用されます。
+これで、Terraformのコードが実行され、インフラストラクチャが作成または更新されます。`.terraform_example.tfvars` ファイルは、センシティブな情報（APIトークンなど）を提供するために使用されます。
 <br>
 <br>
 
