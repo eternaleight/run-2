@@ -30,6 +30,7 @@ github_repo = "<YOUR_GITHUB_REPO_NAME>"
 env_vars = {
   BACKEND_ENV_NAME = "<BACKEND_ENV_VALUE>"
   BACKEND_ENV_NAME2 = "<BACKEND_ENV_VALUE2>"
+# ... 他の環境変数
 }
 ```
 
