@@ -1,3 +1,14 @@
+provider "google" {
+  project = var.project_id
+  region  = var.region
+}
+
+variable "project_id" {}
+variable "region" {}
+variable "service_name" {}
+variable "github_owner" {}
+variable "github_repo" {}
+
 variable "env_vars" {
   description = "Environment variables"
   type        = map(string)

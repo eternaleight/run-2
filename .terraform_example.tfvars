@@ -1,3 +1,9 @@
+# Cloudflare R2
+api_token = "<your_api_token>"
+zone_id = "<your_zone_id>"
+account_id = "<your_account_id>"
+
+# Cloud Run
 project_id = "<YOUR_GCP_PROJECT_ID>"
 region = "asia-northeast1"
 service_name = "<YOUR_CLOUD_RUN_SERVICE_NAME>"
