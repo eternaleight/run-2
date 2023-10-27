@@ -1,7 +1,8 @@
-.terraform/             
+.terraform/
 .terraform.lock.hcl     
 terraform.tfstate       
 .terraform.tfstate.backup
 .terraform.tfvars
 terraform.tfstate.backup
 .variable_env_vars.tf
+secrets.tfvars

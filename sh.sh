@@ -1,4 +1,4 @@
 #!/bin/sh
 
 terraform init
-terraform apply -var-file="secrets_example.tfvars" -var-file=".terraform_example.tfvars"
+terraform apply -var-file="secrets.tfvars" -var-file=".terraform.tfvars"
