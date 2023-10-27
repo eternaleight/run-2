@@ -1,4 +1,4 @@
-# Terraform-Merged-Project
+# Terraform-Merged-Project (R2, Cloud Run)
 
 
 1. **初期化**:
