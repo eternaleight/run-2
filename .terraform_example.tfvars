@@ -2,6 +2,7 @@
 api_token = "<your_api_token>"
 zone_id = "<your_zone_id>"
 account_id = "<your_account_id>"
+bucket_name = "terraform-test-bucket"
 
 # Cloud Run
 project_id = "<YOUR_GCP_PROJECT_ID>"
