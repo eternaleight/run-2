@@ -31,13 +31,10 @@ vcpuの数 1
 
 `run-2`プロジェクトは、以下の主要なファイルで構成されています。
 
-- **`.gitignore`**: Gitリポジトリで無視するファイルやディレクトリのパターンを定義します。
 - **`.terraform_example.tfvars`**: Terraform変数のサンプル値を定義したファイルで、ユーザーが自身の設定に基づいてカスタマイズするためのテンプレートとして機能します。**.terraform_example.tfvarsを参考に`.terraform.tfvars`ファイルを作成して下さい。**
-- **`README.md`**: プロジェクトの概要、設定方法、使用方法についての説明が記載されています。
 - **`cloud_run.tf`**: Google Cloud Runの設定を定義するTerraform設定ファイルです。
 - **`cloudbuild.yaml`**: Google Cloud Buildで使用されるビルド構成を定義するYAMLファイルです。Dockerイメージのビルドとプッシュ、そしてGoogle Cloud Runへのデプロイが自動化されます。
 - **`cloudflare_r2.tf`**: Cloudflare R2のバケットリソースを管理するためのTerraform設定ファイルです。
-- **`sh.sh`**: シェルスクリプトファイルで、環境設定やデプロイプロセスの自動化をサポートするスクリプトを含みます。
 
 ## 前提条件
 - Terraformがインストールされている
