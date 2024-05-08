@@ -1,10 +1,10 @@
-## run-2 (R2, Cloud Run)
+## run-2 (Cloud Run, Cloudflare R2)
 
 <p align="center">
   <img src="https://github.com/eternaleight/eva-r2/assets/96198088/cebf749f-7919-4b6e-8765-bfe1d8421b84" width="50%">
 </p>
 
-このTerraformプロジェクトは、Cloudflare R2バケットとGoogle Cloud Runサービス（最小コスト設定）のデプロイを自動化します。
+このTerraformプロジェクトは、Google Cloud Runサービス（最小コスト設定）とCloudflare R2バケットのデプロイを自動化します。
 #### Cloud Runの設定
 ```:Cloud Runの設定
 コンテナPORT:8001
