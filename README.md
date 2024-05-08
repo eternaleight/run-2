@@ -1,4 +1,4 @@
-# RUN 2 (R2, Cloud Run)
+## run-2 (R2, Cloud Run)
 
 <p align="center">
   <img src="https://github.com/eternaleight/eva-r2/assets/96198088/cebf749f-7919-4b6e-8765-bfe1d8421b84" width="50%">
